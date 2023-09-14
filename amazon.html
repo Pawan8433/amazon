@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" 
+    href="data:image/png;base64,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">
+  <link rel="stylesheet" type="text/css" href="amazon.css">
+  <link rel="stylesheet" type="text/css" href="3style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
+<script type="text/javascript" src="amazon.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div><a href="#" class="nav-logo">
+        <img src="/img/nav.png" alt="Logo"><span>.in</span>
+      </a></div>
+    <div class="navbar-nav">
+      <div class="nav-logo">
+        <div>
+          <span class="nav-line-1 ">
+            Hello
+          </span><br>
+          <span class="nav-line-2 ">
+            <!-- <i class="fa-regular fa-location-dot  " style="color: #f4f5f5;"></i> -->
+            <i class="fas fa-map-marker-alt text-primary"></i>
+            Select your address
+          </span>
+        </div>
+      </div>
+
+    </div>
+    <div class="main">
+      <div class="a-search-bar">
+        <div class="nav-left">
+
+          <select id="nav-search-select">
+            <option selected="selected" value="aps">All</option>
+            <option value="alexa-skills">Alexa Skills</option>
+            <option value="instant-video">Amazon Video</option>
+            <option value="warehouse-deals">Amazon Warehouse Deals</option>
+            <option value="appliances">Appliances</option>
+            <option value="mobile-apps">Apps &amp; Games</option>
+            <option value="arts-crafts">Arts, Crafts &amp; Sewing</option>
+            <option value="automotive">Automotive Parts &amp; Accessories</option>
+            <option value="baby-products">Baby</option>
+            <option value="beauty">Beauty &amp; Personal Care</option>
+            <option value="stripbooks">Books</option>
+            <option value="popular">CDs &amp; Vinyl</option>
+            <option value="mobile">Cell Phones &amp; Accessories</option>
+            <option value="fashion">Clothing, Shoes &amp; Jewelry</option>
+            <option value="fashion-womens">&nbsp;&nbsp;&nbsp;Women</option>
+            <option value="fashion-mens">&nbsp;&nbsp;&nbsp;Men</option>
+            <option value="fashion-girls">&nbsp;&nbsp;&nbsp;Girls</option>
+            <option value="fashion-boys">&nbsp;&nbsp;&nbsp;Boys</option>
+            <option value="fashion-baby">&nbsp;&nbsp;&nbsp;Baby</option>
+            <option value="collectibles">Collectibles &amp; Fine Art</option>
+            <option value="computers">Computers</option>
+            <option value="courses">Courses</option>
+            <option value="financial">Credit and Payment Cards</option>
+            <option value="digital-music">Digital Music</option>
+            <option value="electronics">Electronics</option>
+            <option value="gift-cards">Gift Cards</option>
+            <option value="grocery">Grocery &amp; Gourmet Food</option>
+            <option value="handmade">Handmade</option>
+            <option value="hpc">Health, Household &amp; Baby Care</option>
+            <option value="local-services">Home &amp; Business Services</option>
+            <option value="garden">Home &amp; Kitchen</option>
+            <option value="industrial">Industrial &amp; Scientific</option>
+            <option value="digital-text">Kindle Store</option>
+            <option value="fashion-luggage">Luggage &amp; Travel Gear</option>
+            <option value="luxury-beauty">Luxury Beauty</option>
+            <option value="magazines">Magazine Subscriptions</option>
+            <option value="movies-tv">Movies &amp; TV</option>
+            <option value="mi">Musical Instruments</option>
+            <option value="office-products">Office Products</option>
+            <option value="lawngarden">Patio, Lawn &amp; Garden</option>
+            <option value="pets">Pet Supplies</option>
+            <option value="prime-exclusive">Prime Exclusive</option>
+            <option value="pantry">Prime Pantry</option>
+            <option value="software">Software</option>
+            <option value="sporting">Sports &amp; Outdoors</option>
+            <option value="tools">Tools &amp; Home Improvement</option>
+            <option value="toys-and-games">Toys &amp; Games</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="videogames">Video Games</option>
+            <option value="wine">Wine</option>
+          </select>
+        </div>
+
+      </div>
+      <input type="text" class="search-input" placeholder="Search Amazon.in">
+
+      <button type="submit" class="search-button">
+         <!-- <i class="fa-regular fa-magnifying-glass fa-xl"></i> -->
+        <i class="fas fa-search fa-lg"></i> 
+        <!-- <i class="fas fa-search text-primary"></i> Set the icon color to primary -->
+
+        <!-- <span class="search-symbol">&#128269;</span> -->
+      </button>
+
+    </div>
+   
+  
+    <div class="dropdown">
+      <img src="/img/flagicon.png">
+      <span class="lang" >EN</span>
+      
+        <i class="fa-sharp fa-solid fa-caret-down" style="color: #adb1b8;"></i>
+        <div class="dropdown-content">
+          <a href="#"><input type="checkbox"  checked class="en" name="ph" id="ph" onchange="uncheck_others(this)"> English</a>
+          <hr class="spa">
+          <a href="#"><input type="checkbox" class="en" name="p" id="p" onchange="uncheck_others(this)"> Hindi</a>
+          <a href="#"><input type="checkbox" class="en" name="phq" id="phq" onchange="uncheck_others(this)">  Marathi</a>
+          <a href="#"><input type="checkbox" class="en" name="phs" id="phs" onchange="uncheck_others(this)"> French</a>
+          <a href="#"><input type="checkbox" class="en" name="phs" id="phs" onchange="uncheck_others(this)"> French</a>
+          <a href="#"><input type="checkbox" class="en" name="phs" id="phs" onchange="uncheck_others(this)"> French</a>
+          <a href="#"><input type="checkbox" class="en" name="phs" id="phs" onchange="uncheck_others(this)"> French</a>
+          <a href="$" class="li">learn more</a>
+          <hr>
+          <a><img src="/img/flagicon.png"> You are Shopping on amazon.in </a>
+          <!-- <br> -->
+      
+      <a href="q" class="li"> change country/region</a>
+        </div>
+        
+         
+     
+    </div>
+    <div class="dropdown-1">
+      <span class="hel">
+        Hello,sign in</span>
+      <span class="acc">
+        Account & List</span>
+      <div class="dropdown-1-content">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+        <a href="#">Option 4</a>
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+        <a href="#">Option 4</a>
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+        <a href="#">Option 4</a>
+      </div>
+    </div>
+    <div class="dropdown-2">
+      <span class="hel">
+        Returns</span><br>
+      <span class="acc">
+        & Order</span>
+       
+    </div>
+    <div class="dropdown-3">
+      <img src="/img/cart.png"  >
+      <span class="ab" >0</span>
+      <span class="acc">Cart</span>
+       
+    </div>
+   
+  </nav>
+  <nav class="navbar-1">
+    
+      <div id="mainsidebar">
+        <span class="tv" onclick="openSidebar()">&#9776;<a href="sidebar.html">All</a> </span>
+      </div>
+    <!-- <a class="tv "> &#9776; All</a> -->
+     <a class="tv" href="scrollbar.html" >Amazon miniTV</a>
+     <a class="sel" href="" >Sell</a>
+     <a class="best" href="#" >Best Seller</a>
+     <a class="deal" href="#" >Today's Deal</a>
+     <a class="phone" href="#" >Mobile</a>
+     <a class="service" href="#" >Customer Service</a>
+     <a class="new" href="#" >New Releases</a>
+     <!-- <a class="prime" href="#" >prime</a> -->
+     <a href="#" class="image-link">Prime<div class="image-container">
+        <img src="prime.jpg" alt="Image">
+      </div>
+    </a>
+     <a class="mini" href="$"><img src="/img/f.jpg"></a>
+     <!-- <a class="" href="#" >Sell</a>
+     <a class="" href="#" >Sell</a> -->
+     
+  </nav>
+<div class="slidd">
+  
+  <div class="carousel-container">
+    <div class="images fade">
+       <img src="/img/a.jpg">
+       </div>
+       <div class="images fade">
+          <img src="/img/b.jpg">
+       </div>
+       <div class="images fade">
+          <img src="/img/c.jpg">
+       </div>
+       
+       <div class="images fade">
+          <img src="/img/d.jpg">
+       </div>
+       
+       <!-- Previous and Next Buttons -->
+      <div class="slider-b">
+        <a class="previous" onclick="plusSlides(-1)"> 
+          <div class="arrow-1"></div>
+         <div class="left"></div></a>
+      <a class="next" onclick="plusSlides(1)">
+         <div class="arrow"></div>
+         <div class="arrow right"></div></a>
+     </a>
+      <div class="card-section">
+        <div class="cardss">
+          <div class="card-1">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-2">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-3">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card--4">
+            <span><h class="headng">Sign in for your best experience </h><button class="sign">Sign in securely</button></span>
+            <div class="card-grid-1">
+           
+              <span><a href="1" class="bottom"><img src="/img/Laptop.jpg"></a>
+              <a class="sp">Sponsored <i class=" fa-solid fa-circle-exclamation" style="color: #a0a6b0;"></i></a></span>
+            </div>
+        
+          </div>
+        </div>
+        <div class="cardss">
+          <div class="card-1">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-2">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-3">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-4">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+        </div>
+        <div class="cardss1">
+          <div class="card-1">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-2">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-3">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/bags.jpg" alt="Image 1">
+                <div class="card-name">Product 1</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 2">
+                <div class="card-name">Product 2</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 3">
+                <div class="card-name">Product 3</div>
+              </a>
+              <a class="card-item">
+                <img class="card-image" src="/img/bags.jpg" alt="Image 4">
+                <div class="card-name">Product 4</div>
+              </a>
+            </div>
+            <span><a href="1" class="bottom">see all offers</a></span>
+        
+          </div>
+          <div class="card-4-1">
+            <span><a class="heading">Up to 60% off Styles for men</a></span>
+            <div class="card-grid">
+              <a class="card-item">
+        
+                <img class="card-image" src="/img/e.jpg" alt="Image 1">
+                <div class="card-namee">Product 1</div>
+              </a>
+            
+            </div>
+            <span><a href="1" class="bottomm">see all offers</a></span>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+ </div>
+ 
+ 
+ <!-- Navigation Dots-->
+ <!-- <div style="text-align:center">
+    <span class="navigation-dot" onclick="currentSlide(1)"></span>
+    <span class="navigation-dot" onclick="currentSlide(2)"></span>
+    <span class="navigation-dot" onclick="currentSlide(3)"></span>
+    <span class="navigation-dot" onclick="currentSlide(4)"></span>
+ </div> -->
+ <script>
+  //prime
+    // JavaScript to toggle image visibility on hover
+    window.addEventListener('DOMContentLoaded', function() {
+      var link = document.querySelector('.image-link');
+      var imageContainer = link.querySelector('.image-container');
+
+      link.addEventListener('mouseover', function() {
+        imageContainer.style.display = 'block';
+      });
+
+      link.addEventListener('mouseout', function() {
+        imageContainer.style.display = 'none';
+      });
+    });
+// slider
+    var currentIndex = 1;
+    
+    //Show current image
+    showSlides(currentIndex);
+    
+    //Function to move Next
+    function plusSlides(n) {
+       showSlides(currentIndex += n);
+    }
+    
+    //Function to move back
+    function currentSlide(n) {
+       showSlides(currentIndex = n);
+    }
+    
+    
+    //Initiate moving of slides
+    function showSlides(n) {
+       var i;
+       var slides = document.getElementsByClassName("images");
+       var dots = document.getElementsByClassName("navigation-dot");
+       if (n > slides.length) {currentIndex = 1}
+       if (n < 1) {currentIndex = slides.length}
+       for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+       }
+       for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+       }
+       slides[currentIndex-1].style.display = "block";
+       dots[currentIndex-1].className += " active";
+    }
+ </script>
+ 
+</div>
+ <!-- carrd section -->
+ 
+ 
+
+
+</body>
+
+</html>
+ 

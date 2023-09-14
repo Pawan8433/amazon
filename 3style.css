@@ -1,0 +1,136 @@
+/* 3style.css */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f0f0f0;
+  overflow-x: hidden;
+  padding-top: 0px;
+  transition: 0.5s;
+}
+.sidebar-header {
+  position: relative;
+  padding: 10px;
+  white-space: nowrap;
+  /* margin: 10px; */
+  /* text-align: center; */
+  color: #007185;
+  font-family: "Amazon Ember", Arial;
+  background-color: #232f3e;
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  font-size: 48px;
+  margin-left: 50px;
+  font-weight: lighter;
+  color: aliceblue;
+}
+.fa-circle-user {
+  font-size: 30px;
+  padding: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #e3e3f0;
+}
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #f7eaea;
+}
+.d,
+.d1,
+.sub-menu,
+#main-menu,
+.sidebar-menu,
+#sub-menu-heading {
+  font-family: "Amazon Ember", Arial;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+}
+.d1 {
+  padding-top: 20px;
+  padding: 20px 8px 8px 32px;
+  font-family: "Amazon Ember", Arial;
+}
+.d:hover ,.d1:hover,.main-menu:hover{
+  background-color: #a79b9b;
+}
+.dh {
+  padding: 0px 0px 0px 32px;
+  text-decoration: none;
+  font-family: "Amazon Ember", Arial;
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  color: #000;
+  transition: 0.3s;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0px 0px 0px 0px;
+}
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+.sidebar-menu li a i {
+  margin-right: 10px;
+}
+.menu-item {
+  position: relative;
+  text-decoration: none;
+}
+#sub-menu-heading{
+  font-size: large;
+  font-weight: bold;
+  font-family: "Amazon Ember", Arial;
+  padding-bottom: 0px;
+}
+.menu-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  color: #000;
+  font-weight: lighter;
+  text-decoration: none;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+.sub-menu {
+  display: none;
+  padding-left: 2px;
+  text-decoration: none;
+}
+.sub-menu li {
+  padding: 5px 2px;
+  text-decoration: none;
+  font-family: "Amazon Ember", Arial;
+}
+.first {
+  display: block;
+}
+.hide-first {
+  display: none;
+}
+.arrow-rotate {
+  transform: rotate(90deg);
+}
+.tv{
+  color: white;
+}
