@@ -1,0 +1,111 @@
+<!DOCTYPE >  
+<html  >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="scroller.css" rel="stylesheet" type="text/css">
+<link href="http://www.jqueryscript.net/css/top.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="scroller.js"></script>
+</head>
+<body>
+ 
+<script language="javascript" type="text/javascript">
+
+            $(function() {
+             
+				$("#amazon_scroller3").amazon_scroller({
+                    scroller_title_show: 'enable',
+                    scroller_time_interval: '300000',
+                    scroller_window_background_color: "white ",
+                    scroller_window_padding: '15',
+                    scroller_border_size: '2',
+                    scroller_border_color: '#CCC',
+                    scroller_images_width: '240',
+                    scroller_images_height: '200',
+                    scroller_title_size: '11',
+                    scroller_title_color: 'black',
+                    scroller_show_count: '5',
+                    directory: 'images'
+                   
+                });
+				$("#amazon_scroller2").amazon_scroller({
+          scroller_title_show: 'disable',
+                    scroller_time_interval: '300000',
+                    scroller_window_background_color: "none",
+                    scroller_window_padding: '15',
+                    scroller_border_size: '0',
+                    scroller_border_color: '#CCC',
+                    scroller_images_width: '198',
+                    scroller_images_height: '180',
+                    scroller_title_size: '12',
+                    scroller_title_color: 'black',
+                    scroller_show_count: '6',
+                    directory: 'images'
+                    
+                });
+            });
+        </script>
+<!-- <h1 style="margin-top:100px;">Amazon style image and title scroller</h1> -->
+<h2>Demo</h2>
+ 
+<div id="amazon_scroller3" class="amazon_scroller">
+  <div class="amazon_scroller_mask">
+  <ul>
+  <li><a href="7" title="HTML5: Up and Running" target="_blank"><img src="/img/s1_1.jpg" width="124" height="160" alt="HTML5: Up and Running"/></a></li>
+  <li><a href="0" title="Building iPhone Apps with HTML, CSS, and JavaScript: Making App Store Apps Without Objective-C or Cocoa " target="_blank"><img src="/img/s1_2.jpg"/></a></li>
+  <li><a href="7" title="CSS: The Missing Manual" target="_blank"><img src="/img/s1_3.jpg"/></a></li>
+  <li><a href="6" title="HTML5: Designing Rich Internet Applications (Visualizing the Web)" target="_blank"><img src="/img/s1_4.jpg"/></a></li>
+  <li><a href="2" title="Sams Teach Yourself Web Publishing with HTML and CSS in One Hour a Day: Includes New HTML5 Coverage (6th Edition)" target="_blank"><img src="/img/s1_5.jpg"/></a></li>
+  <li><a href="8" title="JavaScript: The Missing Manual" target="_blank"><img src="/img/s1_6.jpg"/></a></li>
+  <li><a href="5" title="Learning jQuery 1.3 " target="_blank"><img src="/img/s1_7.jpg"/></a></li>
+  <li><a href="0" title="Building iPhone Apps with HTML, CSS, and JavaScript: Making App Store Apps Without Objective-C or Cocoa " target="_blank"><img src="/img/s1_8.jpg"/></a></li>
+  <li><a href="0" title="Building iPhone Apps with HTML, CSS, and JavaScript: Making App Store Apps Without Objective-C or Cocoa " target="_blank"><img src="/img/s1_10.jpg"/></a></li>
+  <li><a href="0" title="Building iPhone Apps with HTML, CSS, and JavaScript: Making App Store Apps Without Objective-C or Cocoa " target="_blank"><img src="/img/s1_9.jpg"/></a></li>
+
+  </ul>
+  </div>
+  <ul class="amazon_scroller_nav"  >
+  <li class="left" ><img src="/img/leftarrow.png"  ></li>
+  <li class="right"><img src="/img/rightarrow.png"></li>
+  </ul>
+  <div style="clear: both"></div>
+  </div>
+
+  <hr/> 
+<div id="amazon_scroller2" class="amazon_scroller">
+<div class="amazon_scroller_mask">
+<ul>
+<li><a href="link1" title="title1"><img src="/img/s21.jpg"   alt="title"/></a></li>
+<li><a href="link2" title="title2"><img src="/img/s22.jpg"   alt="title"/></a></li>
+<li><a href="link3" title="title3"><img src="/img/s23.jpg"   alt="title"/></a></li>
+<li><a href="link4" title="title4"><img src="/img/s24.jpg"   alt="title"/></a></li>
+<li><a href="link1" title="title5"><img src="/img/s25.jpg"   alt="title"/></a></li>
+<li><a href="link2" title="title6"><img src="/img/s26.jpg"   alt="title"/></a></li>
+<li><a href="link3" title="title7"><img src="/img/s27.jpg"   alt="title"/></a></li>
+<li><a href="link4" title="title8"><img src="/img/s28.jpg"   alt="title"/></a></li>
+</ul>
+</div>
+<ul class="amazon_scroller_nav">
+  <li class="left" ><img src="/img/leftarrow.png"  ></li>
+  <li class="right"><img src="/img/rightarrow.png"></li>
+</ul>
+<div style="clear: both"></div>
+</div>
+
+
+ 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
