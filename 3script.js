@@ -32,3 +32,4 @@ function openSidebar() {
       firstClass.style.display = "block";
     }
   }
+  
