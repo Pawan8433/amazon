@@ -11,7 +11,8 @@ This is a clone of the Amazon website created using HTML and CSS. This project w
 
 ## Screenshots
 
-![Amazon Clone Screenshot](![Uploading image.png…]()
+![Amazon Clone Screenshot](![image](https://github.com/Pawan8433/amazon/assets/106168429/e9a2f8eb-2512-4560-939b-bfc0992ed854)
+
 )
 
 ## Technologies Used
