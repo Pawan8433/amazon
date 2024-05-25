@@ -26,7 +26,7 @@ To view the project locally:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/amazon-clone.git
+    git clone [(https://github.com/Pawan8433/amazon.git)]
     ```
 
 2. Navigate to the project directory:
@@ -40,9 +40,7 @@ To view the project locally:
 
 If you'd like to contribute to this project, please fork the repository and use a feature branch. Pull requests are warmly welcome.
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+ 
  
 ### Note
 
