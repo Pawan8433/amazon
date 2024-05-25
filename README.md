@@ -1,4 +1,4 @@
-# Amazon Clone ## (Home page)
+# Amazon Clone (Home page)
 
 This is a clone of the Amazon website created using HTML and CSS. This project was created for educational purposes to demonstrate the ability to replicate the look and feel of a real-world e-commerce website.
 
