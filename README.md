@@ -5,14 +5,14 @@ This is a clone of the Amazon website created using HTML and CSS. This project w
 ## Features
 
 - **Header:** Includes the Amazon logo, search bar, and navigation links.
-- **Carousel:** A slider for showcasing promotions and deals.
+ 
 - **Product Listings:** Displaying product categories and items with discounts.
-- **Sign-In Prompt:** A section prompting users to sign in for a better experience.
-- **Responsive Design:** The layout adjusts for different screen sizes.
+ 
 
 ## Screenshots
 
-![Amazon Clone Screenshot](path-to-your-screenshot.png)
+![Amazon Clone Screenshot](![Uploading image.png…]()
+)
 
 ## Technologies Used
 
@@ -42,13 +42,7 @@ If you'd like to contribute to this project, please fork the repository and use 
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## Contact
-
-If you have any questions or suggestions, feel free to reach out to me at [your-email@example.com](mailto:your-email@example.com).
-
----
-
+ 
 ### Note
 
 This project is for educational purposes only. It is not intended for any commercial use.
