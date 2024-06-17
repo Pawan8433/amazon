@@ -42,7 +42,4 @@ If you'd like to contribute to this project, please fork the repository and use 
 
  
  
-### Note
-
-This project is for educational purposes only. It is not intended for any commercial use.
 
